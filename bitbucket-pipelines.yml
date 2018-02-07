@@ -7,8 +7,18 @@ image: maven:4.0.0
 
 pipelines:
   default:
-    - step:
+    - step: Maven clean build
         caches:
           - maven
         script: # Modify the commands below to build your repository.
-          - mvn -B verify # -B batch mode makes Maven less verbose
+          - mvn -B clean # -B batch mode makes Maven less verbose
+    - step: maven compile build
+        caches:
+          - maven
+        script: # Modify the commands below to build your repository.
+            - mvn -B compile # -B batch mode makes Maven less verbose
+    - step:
+        caches: maven package build
+          - maven
+        script: # Modify the commands below to build your repository.
+          - mvn -B package # -B batch mode makes Maven less verbose
