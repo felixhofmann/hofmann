@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hofmann:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="hofmann-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="hofmann:war exploded" />
+    </root>
+  </artifact>
+</component>
